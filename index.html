@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CodeWithSharu - VTU engineering notes, syllabus, programs and exam preparation.">
+  <title>CodeWithSharu | Learn. Practice. Achieve.</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-icon">CS</span><span>CodeWith<span class="accent">Sharu</span><small>VTU Learning Platform</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+  <nav id="mainNav">
+    <a href="#home">Home</a><a href="#syllabus">VTU Syllabus</a><a href="#resources">Resources</a>
+    <a href="resume.html">Resume</a><a href="#about">About</a>
+    <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">☾</button>
+  </nav>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <span class="eyebrow">VTU 2025 SCHEME · ENGINEERING LEARNING</span>
+    <h1>Learn. Practice.<br><span class="gradient-text">Achieve.</span></h1>
+    <p>Your learning space for syllabus-wise notes, programming examples, important questions and exam preparation.</p>
+    <div class="hero-actions"><a class="btn primary" href="#syllabus">Explore syllabus →</a><a class="btn ghost" href="#resources">Explore resources</a></div>
+    <div class="hero-meta"><span>✓ Topic-wise learning</span><span>✓ Exam-focused practice</span><span>✓ Mobile friendly</span></div>
+  </div>
+  <div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="code-window"><div class="window-dots">● ● ●</div><pre><span class="code-purple">const</span> goal = <span class="code-green">"Learn"</span>;
+<span class="code-purple">while</span> (goal) {
+  practice();
+  improve();
+}
+<span class="code-blue">console</span>.log(<span class="code-green">"Success!"</span>);</pre><div class="code-footer">CODEWITHSHARU <span>● READY TO LEARN</span></div></div></div>
+</section>
+<section class="stats">
+  <div><strong>2025</strong><span>VTU Scheme</span></div><div><strong>2</strong><span>Branches planned</span></div>
+  <div><strong>8</strong><span>Semesters planned</span></div><div><strong>5</strong><span>Module structure</span></div>
+</section>
+<section class="section" id="syllabus">
+  <div class="section-heading"><div><span class="eyebrow">START LEARNING</span><h2>Explore VTU syllabus</h2><p>Choose your scheme, branch and semester to open subjects and modules.</p></div><span class="pill">2025 Scheme</span></div>
+  <div class="selector-panel">
+    <label>Scheme<select id="schemeSelect"><option value="2025">VTU 2025 Scheme</option></select></label>
+    <label>Branch<select id="branchSelect"><option value="CSE">Computer Science & Engineering (CSE)</option><option value="AIML">Artificial Intelligence & Machine Learning (AI&ML)</option></select></label>
+    <label>Semester<select id="semesterSelect"></select></label>
+  </div>
+  <div class="content-layout"><aside class="subject-list"><h3>Subjects</h3><div id="subjectList"></div></aside><div class="subject-detail" id="subjectDetail"><div class="empty-state"><div class="empty-icon">⌁</div><h3>Select a subject</h3><p>Choose a subject to view its modules, topics, notes and exam questions.</p></div></div></div>
+</section>
+<section class="section alt-section" id="resources">
+  <div class="section-heading"><div><span class="eyebrow">LEARNING LIBRARY</span><h2>More ways to learn</h2><p>Quick access to programming and exam-preparation resources.</p></div></div>
+  <div class="resource-grid">
+    <a class="resource-card" href="programs.html"><span class="resource-icon">⌘</span><h3>Programming Library</h3><p>Java, C/DSA, Python, HTML, CSS and JavaScript examples.</p><b>Explore programs →</b></a>
+    <a class="resource-card" href="git.html"><span class="resource-icon">⑂</span><h3>Git & GitHub</h3><p>Essential commands, explanations and practical workflows.</p><b>Learn Git →</b></a>
+    <a class="resource-card" href="questions.html"><span class="resource-icon">✦</span><h3>Important Questions</h3><p>Module-wise practice questions and priority-based revision.</p><b>Practice now →</b></a>
+    <a class="resource-card" href="quiz.html"><span class="resource-icon">✓</span><h3>Quick Quiz</h3><p>Test your understanding with short practice questions.</p><b>Take a quiz →</b></a>
+  </div>
+</section>
+<section class="section" id="about"><div class="about-card"><div><span class="eyebrow">ABOUT THE PLATFORM</span><h2>Built for engineering learners.</h2><p>CodeWithSharu organizes learning material around the VTU syllabus. Content is labelled by source and verification status so students can distinguish official syllabus information from practice material.</p></div><div class="about-mark">CS</div></div></section>
+</main>
+<footer><a class="brand" href="#"><span class="brand-icon">CS</span><span>CodeWith<span class="accent">Sharu</span><small>Learn. Practice. Achieve.</small></span></a><span>© <span id="year"></span> CodeWithSharu. Built for learners.</span><a href="mailto:hello@codewithsharu.example">Contact / Feedback</a></footer>
+<script src="data/cse-data.js"></script><script src="data/aiml-data.js"></script><script src="data/common-sem3.js"></script>
+<script src="data/questions-data.js"></script><script src="js/app.js"></script>
+</body></html>

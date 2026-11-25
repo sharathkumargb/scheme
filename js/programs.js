@@ -1,0 +1,10 @@
+const examples=[
+{lang:"Java",title:"Hello World",aim:"Write a Java program to print a message.",code:`public class Main {\n  public static void main(String[] args) {\n    System.out.println("Hello, CodeWithSharu!");\n  }\n}`,output:"Hello, CodeWithSharu!"},
+{lang:"C / DSA",title:"Array traversal",aim:"Read and display array elements.",code:`#include <stdio.h>\nint main(void) {\n  int a[] = {10, 20, 30, 40, 50};\n  int n = sizeof(a) / sizeof(a[0]);\n  for (int i = 0; i < n; i++) printf("%d ", a[i]);\n  return 0;\n}`,output:"10 20 30 40 50"},
+{lang:"Python",title:"Sum of two numbers",aim:"Add two numbers using Python.",code:`a = 12\nb = 8\nprint("Sum =", a + b)`,output:"Sum = 20"},
+{lang:"HTML",title:"Basic HTML page",aim:"Create a basic HTML document.",code:`<!doctype html>\n<html><head><title>My Page</title></head>\n<body><h1>Hello World</h1><p>Welcome to CodeWithSharu.</p></body></html>`,output:"A page with heading and paragraph"},
+{lang:"JavaScript",title:"Function example",aim:"Create and call a JavaScript function.",code:`function add(a, b) {\n  return a + b;\n}\nconsole.log(add(4, 6));`,output:"10"}
+];
+const root=document.getElementById("programs"),search=document.getElementById("search");
+function render(){let q=search.value.toLowerCase();root.innerHTML=examples.filter(x=>(x.title+x.lang).toLowerCase().includes(q)).map((x,i)=>`<article class="page-card"><small class="eyebrow">${x.lang}</small><h2>${x.title}</h2><p>${x.aim}</p><pre class="code-block" id="code${i}">${x.code.replace(/</g,"&lt;")}</pre><button class="copy-btn" data-copy="${i}">Copy code</button><p><b>Expected output:</b> ${x.output}</p></article>`).join("")}
+root.addEventListener("click",e=>{let i=e.target.dataset.copy;if(i!==undefined)navigator.clipboard.writeText(examples[Number(i)].code).then(()=>e.target.textContent="Copied!")});search.addEventListener("input",render);render();
